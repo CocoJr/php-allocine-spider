@@ -1,4 +1,4 @@
-### Allocine Spider written in PHP
+### Allocine Spider written in PHP
 
 A simple class to fetch films, series and persons from allocine.fr
 Use `fetchFilm` with the allocine ID to get a \StdClass with all informations.
