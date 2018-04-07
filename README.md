@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/CocoJr/php-allocine-spider.svg?branch=master)](https://travis-ci.org/CocoJr/php-allocine-spider)
+
 ### Installation
 
 `composer require cocojr/allocine-spider`
