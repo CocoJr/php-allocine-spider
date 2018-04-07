@@ -1,0 +1,28 @@
+{
+    "name": "cocojr/allocine-spider",
+    "description": "Allocine spider",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "CocoJr\\Allocine\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CocoJr\\Allocine\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "CocoJr",
+            "email": "thibaultcolette06@hotmail.fr"
+        }
+    ]
+}
