@@ -4,7 +4,7 @@
 
 `composer require cocojr/allocine-spider`
 
-### Tests
+### Tests
 
 `./vendor/bin/phpunit`
 
