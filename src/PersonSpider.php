@@ -17,7 +17,7 @@ class PersonSpider extends AllocineSpider
         'nationality' => '#<div class="meta-body-item">\s+<span class=".+">Nationalité </span>\s+(.+)\s+</div>#U',
         'birthDate' => '#<span class=".+">Naissance </span>.+<strong>(.+)</strong>#isU',
         'img' => '#<img class="thumbnail-img" src="(.+)" alt="" width="215" height="290" />#U',
-        'biography' => '#<div class="person-biography">(.+)</div>#sU',
+        'biography' => '#(<div class="person-biography">|Biographie</span></h2></div>\s+<div class="content-txt">)(.+)</div>#sU',
     );
 
     /**
@@ -138,7 +138,7 @@ class PersonSpider extends AllocineSpider
     {
         $biography = null;
         if (preg_match($this::REGEX['biography'], $card, $tmp_biography)) {
-            $biography = trim(preg_replace('#<span class=".+">Lire la suite</span>#iU', '', $tmp_biography[1]));
+            $biography = trim(preg_replace('#<span class=".+">Lire (la suite|plus)</span>#iU', '', $tmp_biography[2]));
         }
 
         return $biography;

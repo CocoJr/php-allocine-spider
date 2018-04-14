@@ -14,7 +14,7 @@ class FilmSpider extends AllocineSpider
     const REGEX = array(
         'card' => '#<div class="card card-entity card-movie-overview row row-col-padded-10 cf"\s*>(.+)</div>#s',
         'title' => '#<title>(.+) (- film [0-9]+ )?- AlloCiné</title>#U',
-        'synopsis' => '#<div class=".*synopsis-txt" itemprop="description">(.+)</div>#U',
+        'synopsis' => '#<div class=".+" itemprop="description">(.+)</div>#isU',
         'img' => '#<img class="thumbnail-img" src="(.+)" alt=".+" width="(215|216)" height="(290|288)" itemprop="image"\s*/>#U',
         'release' => '#<title>(.+) - film ([0-9]+) - AlloCiné</title>#U',
         'duration' => array(
