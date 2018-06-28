@@ -23,7 +23,7 @@ class FilmSpider extends AllocineSpider
             '#([0-9]+)min#'
         ),
         'creators' => '#<span itemprop="director" itemscope itemtype="http://schema.org/Person">\s+<a class="blue-link" href="/personne/fichepersonne_gen_cpersonne=([0-9]+).html" title=".+" itemprop="url"><span itemprop="name">(.+)</span></a>#U',
-        'actors' => '#<strong class="meta-title" itemprop="actor" itemscope itemtype="http://schema.org/Person">\s+<a class="meta-title-link" href="/personne/fichepersonne_gen_cpersonne=([0-9]+).html">\s+<span itemprop="name">(.+)</span>\s+</a>#U',
+        'actors' => '#<(?:strong|div) class="meta-title" itemprop="actor" itemscope itemtype="http://schema.org/Person">\s+<a class="meta-title-link" href="/personne/fichepersonne_gen_cpersonne=([0-9]+).html">\s+<span itemprop="name">(.+)</span>\s+</a>#U',
         'types' => '#<span itemprop="genre">(.+)</span>#U',
         'nationalities' => array(
             '#<div class="meta-body-item">\s+<span class=".+">Nationalités?</span>(.+)</div>#isU',
